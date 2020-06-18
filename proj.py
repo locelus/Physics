@@ -141,9 +141,7 @@ vi_update_callback = CustomJS(code="""
 
 
 for w in [vi_text, theta_text]:
-    # w.on_change('value', vi_update)
-    w.js_on_change('value', vi_update_callback)
-
+    w.on_change('value', vi_update)
 
 widgets = column(vi_text, theta_text, h_text, tstart_text, vix_text, viy_text, t_impact_text, p_impact_text, max_h_text)
 
